@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>PKW2000 {{ area }}</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Kandydat', 'procent głosów'],
+            {% for cand in candidates %}
+            ['{{ cand }}', {{ votes[cand] }}],
+            {% endfor %}
+        ]);
+0
+        var options = {
+            title: 'Rozkład głosów',
+            legend: {
+                position: 'bottom'
+            },
+            width: '100%',
+            height: '100%',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+      window.onresize = function(){
+          document.getElementById('piechart').innerHTML = "";
+          drawChart();
+      };
+
+    </script>
+</head>
+<body>
+    <header class> Wyniki wyborów prezydenckich 2000 </header>
+      <div class="breadcrumbs">
+        <ul>
+            {% for crumb in mother_area %}
+            <li>
+                {% if types[crumb] == 'country' %}
+                    <a class="crumb" href="../index.html"> {{crumb}}</a>
+                {% else %}
+                    <a class="crumb" href="../{{types[crumb]}}/{{crumb}}.html"> {{crumb}} </a>
+                {% endif %}
+            </li>
+            <li> / </li>
+            {% endfor %}
+            <li> {{ area }}</li>
+        </ul>
+    </div>
+    <div class="holder">
+        <div class="table">
+            <table>
+                <caption>
+                    Wyniki
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Kandydat</th>
+                        <th>Otrzymane głosy</th>
+                        <th>Procent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for cand in candidates %}
+                    <tr>
+                        <td>{{ cand }}</td>
+                        <td>{{ votes[cand] }}</td>
+                        {% if votes['Głosy ważne'] > 0 %}
+                            <td>{{ (votes[cand]/votes['Głosy ważne'] * 100) | round(2, 'common') }}%</td>
+                        {% else %}
+                            <td>0%</td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="chart">
+            <div id="piechart"> </div>
+        </div>
+    </div>
+    <header class="subheader"> Gminy </header>
+    <div>
+        <ul>
+            {% for subarea in subareas %}
+            <li class="child">
+                <a href="../{{ types[subarea] }}/{{ subarea }}.html"> {{ commune_name[subarea] }} </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
