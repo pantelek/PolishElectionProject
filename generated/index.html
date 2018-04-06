@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>PKW2000 Polska</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="map.js"></script>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Kandydat', 'procent głosów'],
+            
+            ['Dariusz Maciej GRABOWSKI', 89002],
+            
+            ['Piotr IKONOWICZ', 38672],
+            
+            ['Jarosław KALINOWSKI', 1047949],
+            
+            ['Janusz KORWIN-MIKKE', 252499],
+            
+            ['Marian KRZAKLEWSKI', 2739621],
+            
+            ['Aleksander KWAŚNIEWSKI', 9485224],
+            
+            ['Andrzej LEPPER', 537570],
+            
+            ['Jan ŁOPUSZAŃSKI', 139682],
+            
+            ['Andrzej Marian OLECHOWSKI', 3044141],
+            
+            ['Bogdan PAWŁOWSKI', 17164],
+            
+            ['Lech WAŁĘSA', 178590],
+            
+            ['Tadeusz Adam WILECKI', 28805],
+            
+        ]);
+
+        var options = {
+            title: 'Rozkład głosów',
+            legend: {
+                position: 'bottom'
+            },
+            width: '100%',
+            height: '100%',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+      window.onresize = function(){
+          document.getElementById('piechart').innerHTML = "";
+          drawChart();
+          document.getElementById('regions_div').innerHTML = "";
+          drawRegionsMap();
+      };
+
+    </script>
+</head>
+<body>
+    <header class> Wyniki wyborów prezydenckich 2000 </header>
+    <nav>
+        <ul>
+            <li> Polska</li>
+        </ul>
+    </nav>
+    <div class="holder">
+        <div class="table">
+            <table>
+                <caption>
+                    Wyniki
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Kandydat</th>
+                        <th>Otrzymane głosy</th>
+                        <th>Procent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>Dariusz Maciej GRABOWSKI</td>
+                        <td>89002</td>
+                        
+                            <td>0.51%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Piotr IKONOWICZ</td>
+                        <td>38672</td>
+                        
+                            <td>0.22%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Jarosław KALINOWSKI</td>
+                        <td>1047949</td>
+                        
+                            <td>5.95%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Janusz KORWIN-MIKKE</td>
+                        <td>252499</td>
+                        
+                            <td>1.43%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Marian KRZAKLEWSKI</td>
+                        <td>2739621</td>
+                        
+                            <td>15.57%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Aleksander KWAŚNIEWSKI</td>
+                        <td>9485224</td>
+                        
+                            <td>53.9%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Andrzej LEPPER</td>
+                        <td>537570</td>
+                        
+                            <td>3.05%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Jan ŁOPUSZAŃSKI</td>
+                        <td>139682</td>
+                        
+                            <td>0.79%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Andrzej Marian OLECHOWSKI</td>
+                        <td>3044141</td>
+                        
+                            <td>17.3%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Bogdan PAWŁOWSKI</td>
+                        <td>17164</td>
+                        
+                            <td>0.1%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Lech WAŁĘSA</td>
+                        <td>178590</td>
+                        
+                            <td>1.01%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Tadeusz Adam WILECKI</td>
+                        <td>28805</td>
+                        
+                            <td>0.16%</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="chart">
+            <div id="piechart"> </div>
+        </div>
+    </div>
+    <div id="regions_div"></div>
+    <header class="subheader"> Województwa </header>
+    <div>
+        <ul>
+            
+            <li class="child">
+                <a href="./voivodeship/DOLNOŚLĄSKIE.html"> DOLNOŚLĄSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/KUJAWSKO-POMORSKIE.html"> KUJAWSKO-POMORSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/LUBELSKIE.html"> LUBELSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/LUBUSKIE.html"> LUBUSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/ŁÓDZKIE.html"> ŁÓDZKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/MAŁOPOLSKIE.html"> MAŁOPOLSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/MAZOWIECKIE.html"> MAZOWIECKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/OPOLSKIE.html"> OPOLSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/PODKARPACKIE.html"> PODKARPACKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/PODLASKIE.html"> PODLASKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/POMORSKIE.html"> POMORSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/ŚLĄSKIE.html"> ŚLĄSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/ŚWIĘTOKRZYSKIE.html"> ŚWIĘTOKRZYSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/WARMIŃSKO-MAZURSKIE.html"> WARMIŃSKO-MAZURSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/WIELKOPOLSKIE.html"> WIELKOPOLSKIE </a>
+            </li>
+            
+            <li class="child">
+                <a href="./voivodeship/ZACHODNIOPOMORSKIE.html"> ZACHODNIOPOMORSKIE </a>
+            </li>
+            
+        </ul>
+    </div>
+</body>
+</html>

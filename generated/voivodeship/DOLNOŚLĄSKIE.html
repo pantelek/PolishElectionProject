@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>PKW2000 DOLNOŚLĄSKIE</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Kandydat', 'procent głosów'],
+            
+            ['Dariusz Maciej GRABOWSKI', 6906],
+            
+            ['Piotr IKONOWICZ', 2784],
+            
+            ['Jarosław KALINOWSKI', 37564],
+            
+            ['Janusz KORWIN-MIKKE', 19367],
+            
+            ['Marian KRZAKLEWSKI', 193359],
+            
+            ['Aleksander KWAŚNIEWSKI', 804548],
+            
+            ['Andrzej LEPPER', 32696],
+            
+            ['Jan ŁOPUSZAŃSKI', 8456],
+            
+            ['Andrzej Marian OLECHOWSKI', 234307],
+            
+            ['Bogdan PAWŁOWSKI', 1146],
+            
+            ['Lech WAŁĘSA', 11743],
+            
+            ['Tadeusz Adam WILECKI', 2280],
+            
+        ]);
+0
+        var options = {
+            title: 'Rozkład głosów',
+            legend: {
+                position: 'bottom'
+            },
+            width: '100%',
+            height: '100%',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+      window.onresize = function(){
+          document.getElementById('piechart').innerHTML = "";
+          drawChart();
+      };
+
+    </script>
+</head>
+<body>
+    <header class> Wyniki wyborów prezydenckich 2000 </header>
+      <div class="breadcrumbs">
+        <ul>
+            
+            <li>
+                
+                    <a class="crumb" href="../index.html"> Polska</a>
+                
+            </li>
+            <li> / </li>
+            
+            <li> DOLNOŚLĄSKIE</li>
+        </ul>
+    </div>
+    <div class="holder">
+        <div class="table">
+            <table>
+                <caption>
+                    Wyniki
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Kandydat</th>
+                        <th>Otrzymane głosy</th>
+                        <th>Procent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>Dariusz Maciej GRABOWSKI</td>
+                        <td>6906</td>
+                        
+                            <td>0.51%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Piotr IKONOWICZ</td>
+                        <td>2784</td>
+                        
+                            <td>0.21%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Jarosław KALINOWSKI</td>
+                        <td>37564</td>
+                        
+                            <td>2.77%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Janusz KORWIN-MIKKE</td>
+                        <td>19367</td>
+                        
+                            <td>1.43%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Marian KRZAKLEWSKI</td>
+                        <td>193359</td>
+                        
+                            <td>14.27%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Aleksander KWAŚNIEWSKI</td>
+                        <td>804548</td>
+                        
+                            <td>59.37%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Andrzej LEPPER</td>
+                        <td>32696</td>
+                        
+                            <td>2.41%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Jan ŁOPUSZAŃSKI</td>
+                        <td>8456</td>
+                        
+                            <td>0.62%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Andrzej Marian OLECHOWSKI</td>
+                        <td>234307</td>
+                        
+                            <td>17.29%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Bogdan PAWŁOWSKI</td>
+                        <td>1146</td>
+                        
+                            <td>0.08%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Lech WAŁĘSA</td>
+                        <td>11743</td>
+                        
+                            <td>0.87%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Tadeusz Adam WILECKI</td>
+                        <td>2280</td>
+                        
+                            <td>0.17%</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="chart">
+            <div id="piechart"> </div>
+        </div>
+    </div>
+    <header class="subheader"> Okręgi </header>
+    <div>
+        <ul>
+            
+            <li class="child">
+                <a href="../district/1.html"> 1 </a>
+            </li>
+            
+            <li class="child">
+                <a href="../district/2.html"> 2 </a>
+            </li>
+            
+            <li class="child">
+                <a href="../district/3.html"> 3 </a>
+            </li>
+            
+            <li class="child">
+                <a href="../district/4.html"> 4 </a>
+            </li>
+            
+        </ul>
+    </div>
+</body>
+</html>

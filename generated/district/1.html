@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>PKW2000 1</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Kandydat', 'procent głosów'],
+            
+            ['Dariusz Maciej GRABOWSKI', 2794],
+            
+            ['Piotr IKONOWICZ', 1121],
+            
+            ['Jarosław KALINOWSKI', 15107],
+            
+            ['Janusz KORWIN-MIKKE', 9574],
+            
+            ['Marian KRZAKLEWSKI', 92394],
+            
+            ['Aleksander KWAŚNIEWSKI', 283850],
+            
+            ['Andrzej LEPPER', 12250],
+            
+            ['Jan ŁOPUSZAŃSKI', 4387],
+            
+            ['Andrzej Marian OLECHOWSKI', 116850],
+            
+            ['Bogdan PAWŁOWSKI', 501],
+            
+            ['Lech WAŁĘSA', 5385],
+            
+            ['Tadeusz Adam WILECKI', 989],
+            
+        ]);
+0
+        var options = {
+            title: 'Rozkład głosów',
+            legend: {
+                position: 'bottom'
+            },
+            width: '100%',
+            height: '100%',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+      window.onresize = function(){
+          document.getElementById('piechart').innerHTML = "";
+          drawChart();
+      };
+
+    </script>
+</head>
+<body>
+    <header class> Wyniki wyborów prezydenckich 2000 </header>
+      <div class="breadcrumbs">
+        <ul>
+            
+            <li>
+                
+                    <a class="crumb" href="../index.html"> Polska</a>
+                
+            </li>
+            <li> / </li>
+            
+            <li>
+                
+                    <a class="crumb" href="../voivodeship/DOLNOŚLĄSKIE.html"> DOLNOŚLĄSKIE </a>
+                
+            </li>
+            <li> / </li>
+            
+            <li> 1</li>
+        </ul>
+    </div>
+    <div class="holder">
+        <div class="table">
+            <table>
+                <caption>
+                    Wyniki
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Kandydat</th>
+                        <th>Otrzymane głosy</th>
+                        <th>Procent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>Dariusz Maciej GRABOWSKI</td>
+                        <td>2794</td>
+                        
+                            <td>0.51%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Piotr IKONOWICZ</td>
+                        <td>1121</td>
+                        
+                            <td>0.21%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Jarosław KALINOWSKI</td>
+                        <td>15107</td>
+                        
+                            <td>2.77%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Janusz KORWIN-MIKKE</td>
+                        <td>9574</td>
+                        
+                            <td>1.76%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Marian KRZAKLEWSKI</td>
+                        <td>92394</td>
+                        
+                            <td>16.95%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Aleksander KWAŚNIEWSKI</td>
+                        <td>283850</td>
+                        
+                            <td>52.06%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Andrzej LEPPER</td>
+                        <td>12250</td>
+                        
+                            <td>2.25%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Jan ŁOPUSZAŃSKI</td>
+                        <td>4387</td>
+                        
+                            <td>0.8%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Andrzej Marian OLECHOWSKI</td>
+                        <td>116850</td>
+                        
+                            <td>21.43%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Bogdan PAWŁOWSKI</td>
+                        <td>501</td>
+                        
+                            <td>0.09%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Lech WAŁĘSA</td>
+                        <td>5385</td>
+                        
+                            <td>0.99%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Tadeusz Adam WILECKI</td>
+                        <td>989</td>
+                        
+                            <td>0.18%</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="chart">
+            <div id="piechart"> </div>
+        </div>
+    </div>
+    <header class="subheader"> Gminy </header>
+    <div>
+        <ul>
+            
+            <li class="child">
+                <a href="../commune/21402.html"> Bierutów </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21701.html"> Borów </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22201.html"> Brzeg Dolny </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21301.html"> Cieszków </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22301.html"> Czernica </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22302.html"> Długołęka </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21403.html"> Dobroszyce </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21502.html"> Domaniów </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21404.html"> Dziadowa Kłoda </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21503.html"> Jelcz-Laskowice </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22303.html"> Jordanów Śląski </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22304.html"> Kąty Wrocławskie </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22305.html"> Kobierzyce </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21702.html"> Kondratowice </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21801.html"> Kostomłoty </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21302.html"> Krośnice </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21802.html"> Malczyce </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22306.html"> Mietków </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21405.html"> Międzybórz </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21803.html"> Miękinia </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21303.html"> Milicz </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22001.html"> Oborniki Śląskie </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21401.html"> Oleśnica </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21406.html"> Oleśnica gm. </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21501.html"> Oława </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21504.html"> Oława gm. </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22002.html"> Prusice </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21703.html"> Przeworno </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22307.html"> Sobótka </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21704.html"> Strzelin </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21407.html"> Syców </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21804.html"> Środa Śląska </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22308.html"> Święta Katarzyna </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22003.html"> Trzebnica </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21408.html"> Twardogóra </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21805.html"> Udanin </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/21705.html"> Wiązów </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22202.html"> Wińsko </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22004.html"> Wisznia Mała </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22203.html"> Wołów </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/26401.html"> Wrocław </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22005.html"> Zawonia </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22006.html"> Żmigród </a>
+            </li>
+            
+            <li class="child">
+                <a href="../commune/22309.html"> Żórawina </a>
+            </li>
+            
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>PKW2000 20101</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Kandydat', 'procent głosów'],
+            
+            ['Dariusz Maciej GRABOWSKI', 115],
+            
+            ['Piotr IKONOWICZ', 35],
+            
+            ['Jarosław KALINOWSKI', 349],
+            
+            ['Janusz KORWIN-MIKKE', 274],
+            
+            ['Marian KRZAKLEWSKI', 2698],
+            
+            ['Aleksander KWAŚNIEWSKI', 13120],
+            
+            ['Andrzej LEPPER', 334],
+            
+            ['Jan ŁOPUSZAŃSKI', 278],
+            
+            ['Andrzej Marian OLECHOWSKI', 3705],
+            
+            ['Bogdan PAWŁOWSKI', 14],
+            
+            ['Lech WAŁĘSA', 199],
+            
+            ['Tadeusz Adam WILECKI', 32],
+            
+        ]);
+0
+        var options = {
+            title: 'Rozkład głosów',
+            legend: {
+                position: 'bottom'
+            },
+            width: '100%',
+            height: '100%',
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+
+      window.onresize = function(){
+          document.getElementById('piechart').innerHTML = "";
+          drawChart();
+      };
+
+    </script>
+</head>
+<body>
+    <header class> Wyniki wyborów prezydenckich 2000 </header>
+      <div class="breadcrumbs">
+        <ul>
+            
+            <li>
+                
+                    <a class="crumb" href="../index.html"> Polska</a>
+                
+            </li>
+            <li> / </li>
+            
+            <li>
+                
+                    <a class="crumb" href="../voivodeship/DOLNOŚLĄSKIE.html"> DOLNOŚLĄSKIE </a>
+                
+            </li>
+            <li> / </li>
+            
+            <li>
+                
+                    <a class="crumb" href="../district/2.html"> 2 </a>
+                
+            </li>
+            <li> / </li>
+            
+            <li> 20101</li>
+        </ul>
+    </div>
+    <div class="holder">
+        <div class="table">
+            <table>
+                <caption>
+                    Wyniki
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Kandydat</th>
+                        <th>Otrzymane głosy</th>
+                        <th>Procent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td>Dariusz Maciej GRABOWSKI</td>
+                        <td>115</td>
+                        
+                            <td>0.54%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Piotr IKONOWICZ</td>
+                        <td>35</td>
+                        
+                            <td>0.17%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Jarosław KALINOWSKI</td>
+                        <td>349</td>
+                        
+                            <td>1.65%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Janusz KORWIN-MIKKE</td>
+                        <td>274</td>
+                        
+                            <td>1.3%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Marian KRZAKLEWSKI</td>
+                        <td>2698</td>
+                        
+                            <td>12.75%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Aleksander KWAŚNIEWSKI</td>
+                        <td>13120</td>
+                        
+                            <td>62.02%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Andrzej LEPPER</td>
+                        <td>334</td>
+                        
+                            <td>1.58%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Jan ŁOPUSZAŃSKI</td>
+                        <td>278</td>
+                        
+                            <td>1.31%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Andrzej Marian OLECHOWSKI</td>
+                        <td>3705</td>
+                        
+                            <td>17.52%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Bogdan PAWŁOWSKI</td>
+                        <td>14</td>
+                        
+                            <td>0.07%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Lech WAŁĘSA</td>
+                        <td>199</td>
+                        
+                            <td>0.94%</td>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>Tadeusz Adam WILECKI</td>
+                        <td>32</td>
+                        
+                            <td>0.15%</td>
+                        
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="chart">
+            <div id="piechart"> </div>
+        </div>
+    </div>
+    </body>
+</html>
